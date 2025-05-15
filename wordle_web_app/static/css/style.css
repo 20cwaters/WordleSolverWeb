@@ -1,0 +1,32 @@
+css
+body { font-family: sans-serif; margin: 20px; background-color: #f4f4f4; color: #333; }
+.container { max-width: 600px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+h1 { text-align: center; color: #2c3e50; }
+.suggestion-area, .game-info p, .status-area p { margin-bottom: 10px; font-size: 1.1em; }
+.input-area { margin-bottom: 20px; }
+#userGuess { padding: 10px; font-size: 1em; width: calc(100% - 22px); margin-bottom:10px; border: 1px solid #ddd; border-radius: 4px; text-transform: uppercase; }
+#feedbackBoxes { display: flex; justify-content: center; margin-bottom: 10px; }
+.feedback-box {
+width: 40px; height: 40px; margin: 2px;
+border: 1px solid #ccc; cursor: pointer;
+display: flex; align-items: center; justify-content: center;
+font-size: 1.5em; font-weight: bold; text-transform: uppercase;
+background-color: #787c7e; /* Gray */
+color: white;
+user-select: none;
+}
+.feedback-box.green { background-color: #6aaa64; }
+.feedback-box.yellow { background-color: #c9b458; }
+.feedback-box.gray { background-color: #787c7e; }
+
+button {
+padding: 10px 15px; font-size: 1em; cursor: pointer;
+background-color: #3498db; color: white;
+border: none; border-radius: 4px; margin-right: 5px;
+}
+button:hover { background-color: #2980b9; }
+#resetGameBtn { background-color: #e74c3c; }
+#resetGameBtn:hover { background-color: #c0392b; }
+#possibleWordsSample { max-height: 100px; overflow-y: auto; border: 1px solid #eee; padding: 5px; margin-top: 5px; }
+#possibleWordsSample span { margin-right: 10px; font-family: monospace; }
+#messageArea { margin-top: 15px; font-weight: bold; }

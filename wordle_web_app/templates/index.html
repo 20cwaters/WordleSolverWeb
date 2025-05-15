@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle Solver Web</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Wordle Solver</h1>
+
+        <div class="suggestion-area">
+            Suggested Guess: <strong id="suggestedGuess">{{ suggested_guess }}</strong>
+        </div>
+
+        <div class="game-info">
+            <p>Guess: <span id="guessNumber">{{ guess_number }}</span>/6</p>
+            <p>Known: <span id="knownLettersDisplay">{{ known_letters_display }}</span></p>
+            <p>Present: <span id="presentLettersDisplay">{{ present_letters_display }}</span></p>
+            <p>Absent: <span id="absentLettersDisplay">{{ absent_letters_display }}</span></p>
+        </div>
+
+        <div class="input-area">
+            <label for="userGuess">Your Guess:</label>
+            <input type="text" id="userGuess" maxlength="5" placeholder="Enter your guess">
+            <div id="feedbackBoxes">
+                </div>
+            <button id="submitFeedbackBtn">Submit Feedback</button>
+        </div>
+
+        <div class="status-area">
+            <p>Possible Words: <span id="possibleWordsCount">{{ possible_words_count }}</span></p>
+            <div id="possibleWordsSample">
+                {% for word in possible_words_sample %}
+                    <span>{{ word }}</span>
+                {% endfor %}
+            </div>
+        </div>
+        <button id="resetGameBtn">New Game</button>
+        <div id="messageArea"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

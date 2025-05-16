@@ -10,6 +10,14 @@
     <div class="container">
         <h1>Wordle Solver</h1>
 
+        <div class="settings-area">
+            <label for="excludePastWordsCheckbox">
+                <input type="checkbox" id="excludePastWordsCheckbox" name="exclude_past_words" {% if exclude_past_words_setting %}checked{% endif %}>
+                Exclude past Wordle answers
+            </label>
+            <p>Word list status: <span id="wordListInfo">{{ word_list_info }}</span></p>
+        </div>
+
         <div class="suggestion-area">
             Suggested Guess: <strong id="suggestedGuess">{{ suggested_guess }}</strong>
         </div>
@@ -23,7 +31,7 @@
 
         <div class="input-area">
             <label for="userGuess">Your Guess:</label>
-            <input type="text" id="userGuess" maxlength="5" placeholder="Enter your guess">
+            <input type="text" id="userGuess" maxlength="5" placeholder="Enter your guess" autocomplete="off">
             <div id="feedbackBoxes">
                 </div>
             <button id="submitFeedbackBtn">Submit Feedback</button>

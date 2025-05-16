@@ -30,3 +30,37 @@ button:hover { background-color: #2980b9; }
 #possibleWordsSample { max-height: 100px; overflow-y: auto; border: 1px solid #eee; padding: 5px; margin-top: 5px; }
 #possibleWordsSample span { margin-right: 10px; font-family: monospace; }
 #messageArea { margin-top: 15px; font-weight: bold; }
+
+/* Add to your existing style.css */
+
+.settings-area {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #e9e9e9;
+    border-radius: 4px;
+}
+
+.settings-area label {
+    margin-right: 10px;
+}
+
+.settings-area p {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* Updated feedback-box styles */
+.feedback-box {
+    width: 40px; height: 40px; margin: 2px;
+    border: 1px solid #ccc; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.5em; font-weight: bold; text-transform: uppercase;
+    color: white;
+    user-select: none; /* Prevents text selection when clicking */
+    transition: background-color 0.2s ease-in-out; /* Smooth transition */
+}
+
+.feedback-box.gray { background-color: #787c7e; }
+.feedback-box.yellow { background-color: #c9b458; }
+.feedback-box.green { background-color: #6aaa64; }
